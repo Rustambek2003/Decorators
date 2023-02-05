@@ -1,8 +1,11 @@
-def hi(name):
-    return f"Hi, {name}"
+def inc(x):
+    return x + 1
 
-x = hi('Rustambek')
-y = hi
+def dec(x):
+    return x - 1
 
-print(type(x))
-print(type(y))
+def operate(func, x):
+    result = func(x)
+    return result
+
+print(operate(inc, 13))
