@@ -1,11 +1,11 @@
 def my_decorator(func):
-    def wrapper():
-        x = func()
+    def wrapper(name):
+        x = func(name.upper())
         return x + '!'
     return wrapper
 
-def hi():
-    return 'Hi'
+@my_decorator
+def hi(name):
+    return f'Hi, {name}'
 
-f = my_decorator(hi)
-print(f())
+print(hi('rustam'))
