@@ -1,5 +1,8 @@
-def function(a, b):
-    return "Ok"
+def hi(name):
+    return f"Hi, {name}"
 
-print(type(function(1, 2)))
-print(type(function))
+x = hi('Rustambek')
+y = hi
+
+print(type(x))
+print(type(y))
