@@ -1,11 +1,8 @@
-def inc(x):
-    return x + 1
+import json
+def read_data(path:str)->dict:
+    with open(path) as f:
+        data = json.load(f)
 
-def dec(x):
-    return x - 1
+    return data
 
-def operate(func, x):
-    result = func(x)
-    return result
-
-print(operate(inc, 13))
+print(read_data('data.csv'))
